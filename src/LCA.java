@@ -2,16 +2,12 @@ import java.util.ArrayList;
 import java.util.List; 
   
 // A Binary Tree node 
-class Node { 
-    int data; 
-    Node left, right; 
-  
-    Node(int value) { 
-        data = value; 
-        left = right = null; 
-    } 
-} 
-  
+ /**
+  * 
+  * @author Oisín Morrin
+  * @about taken from http://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/ with minor update to give Node its own file
+  *
+  */
 public class LCA  
 { 
   
@@ -19,7 +15,7 @@ public class LCA
     private List<Integer> path1 = new ArrayList<>(); 
     private List<Integer> path2 = new ArrayList<>(); 
   
-    // Finds the path from root node to given root of the tree. 
+    
     int findLCA(int n1, int n2) { 
         path1.clear(); 
         path2.clear(); 
@@ -56,9 +52,9 @@ public class LCA
           
         // Store this node . The node will be removed if 
         // not in path from root to n. 
-        path.add(root.data); 
+        path.add(root.value); 
   
-        if (root.data == n) { 
+        if (root.value == n) { 
             return true; 
         } 
   
