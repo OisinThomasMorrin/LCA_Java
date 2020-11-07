@@ -4,8 +4,8 @@ import java.util.List;
 // A Binary Tree node 
  /**
   * 
-  * @author Oisín Morrin
-  * @about taken from http://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/ with minor update to give Node its own file
+  * @author OisÃ­n Morrin
+  * @summary normal LCA taken from http://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/ with minor update to give Node its own file
   *
   */
 public class LCA  
