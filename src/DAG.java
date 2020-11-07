@@ -16,7 +16,22 @@ class DAG {
 		for (int i = 0; i < V; i++) 
 			adj.add(new LinkedList<>()); 
 	} 
-	
+    
+    public int findLCA(int v, int w){
+        if(v < 0 || w < 0 || v >= adj.size() || w >= adj.size())
+            return -1;
+        else if(this.isCyclic())
+            return -1;
+        else{
+            this.findLCAUtil(v, w);
+        }
+
+        return 0;
+
+    }
+
+    
+
 	// This function is a variation of DFSUtil() in 
 	// https://www.geeksforgeeks.org/archives/18212 
 	private boolean isCyclicUtil(int i, boolean[] visited, 
@@ -53,7 +68,7 @@ class DAG {
 	// cycle, else false. 
 	// This function is a variation of DFS() in 
 	// https://www.geeksforgeeks.org/archives/18212 
-	private boolean isCyclic() 
+	public boolean isCyclic() 
 	{ 
 		
 		// Mark all the vertices as not visited and 
@@ -79,11 +94,8 @@ class DAG {
 		graph.addEdge(0, 2); 
 		graph.addEdge(1, 2); 
         graph.addEdge(2, 0);
-		if(graph.isCyclic()) 
-			System.out.println("Graph contains cycle"); 
-		else
-			System.out.println("Graph doesn't "
-									+ "contain cycle"); 
+
+        System.out.println(graph.findLCA(0, 4));
 	} 
 } 
 
